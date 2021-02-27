@@ -15,6 +15,7 @@ var carDetails = {
   model: 'tacoma',
   year: 1994
 }
+
 // Do not edit the code above.
 
 /*
@@ -22,6 +23,10 @@ var carDetails = {
 */
 
 //Code Here
+
+
+const {make, model, year, color} = carDetails;
+
 
 
 
@@ -35,11 +40,12 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
+
 
 
 
@@ -55,6 +61,12 @@ function greeting( obj ) {
 
 //Code Here
 
+function totalPopulation(obj){
+  var {utah, california, texas, arizona} = obj;
+  var total = utah + california + texas + arizona;
+  return total;
+}
+
 
 
 ////////// PROBLEM 4 //////////
@@ -69,7 +81,14 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function ingredients(obj){
+  var arr = [];
+  var {carb} = obj;
+  var {fat} = obj;
+  var {protein} = obj;
+  arr.push(carb, fat, protein);
+  return arr;
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -87,7 +106,21 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function largeNumbers({first, second, third}){
+  if (first > second){
+    if (third > second){
+      return second;
+    }
+  }
+  else if (second > first){
+    if (third > first){
+      return first;
+    }
+  }
+  else{
+    return third;
+  }
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -98,5 +131,20 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+function numberGroups({a, b, c}){
+  var al = a.length;
+  var bl = b.length;
+  var cl = c.length;
+  if (al > bl && al > cl){
+    return a;
+  }
+  if (bl > al && bl > cl){
+    return b;
+  }
+  else{
+    return c;
+  }
+}
 
 
